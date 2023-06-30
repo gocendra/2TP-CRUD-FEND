@@ -10,8 +10,8 @@ const { createApp } = Vue
         id:0,
         nombre:"", 
         imagen:"",
-        stock:0,
-        precio:0,
+        telefono:0,
+        Dni:0,
     }  
     },
     methods: {
@@ -41,8 +41,8 @@ const { createApp } = Vue
         grabar(){
             let producto = {
                 nombre:this.nombre,
-                precio: this.precio,
-                stock: this.stock,
+                Dni: this.Dni,
+                telefono: this.telefono,
                 imagen:this.imagen
             }
             var options = {
