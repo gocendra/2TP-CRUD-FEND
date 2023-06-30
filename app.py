@@ -20,12 +20,12 @@ ma=Marshmallow(app)   #crea el objeto ma de de la clase Marshmallow
 class Producto(db.Model):
     id=db.Column(db.Integer, primary_key=True)
     nombre=db.Column(db.String(100))
-    precio=db.Column(db.Integer)
+    Dni=db.Column(db.Integer)
     stock=db.Column(db.Integer)
     imagen=db.Column(db.String(400))
-    def __init__(self,nombre,precio,stock,imagen):
+    def __init__(self,nombre,Dni,stock,imagen):
         self.nombre = nombre
-        self.precio = precio
+        self.Dni = Dni
         self.stock = stock
         self.imagen = imagen
 
@@ -36,7 +36,7 @@ with app.app_context():
 
 class ProductoSchema(ma.Schema):
     class Meta:
-        fields=('id','nombre','precio','stock','imagen')
+        fields=('id','nombre','Dni','stock','imagen')
     
 producto_schema=ProductoSchema() #El objeto para traer un producto
 productos_schema=ProductoSchema(many=True) #Trae muchos registro de producto
@@ -78,10 +78,10 @@ def delete_producto(id):
 def create_producto():
     #print(request.json)  # request.json contiene el json que envio el cliente
     nombre=request.json['nombre']
-    precio=request.json['precio']
+    Dni=request.json['Dni']
     stock=request.json['stock']
     imagen=request.json['imagen']
-    new_producto=Producto(nombre,precio,stock,imagen)
+    new_producto=Producto(nombre,Dni,stock,imagen)
     db.session.add(new_producto)
     db.session.commit()
     return producto_schema.jsonify(new_producto)
@@ -92,7 +92,7 @@ def update_producto(id):
     producto=Producto.query.get(id)
  
     producto.nombre=request.json['nombre']
-    producto.precio=request.json['precio']
+    producto.Dni=request.json['Dni']
     producto.stock=request.json['stock']
     producto.imagen=request.json['imagen']
 
