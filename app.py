@@ -90,7 +90,7 @@ def create_producto():
     fechnac=request.json['fechnac']
     feching=request.json['feching']
     imagen=request.json['imagen']
-    new_producto=Producto(nombre,Dni,telefono,direccion,fechnac,fechnac,imagen)
+    new_producto=Producto(nombre,Dni,telefono,direccion,fechnac,feching,imagen)
     db.session.add(new_producto)
     db.session.commit()
     return producto_schema.jsonify(new_producto)
