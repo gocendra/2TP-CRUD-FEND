@@ -39,6 +39,9 @@ src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Dni</th>
                                     <th scope="col">Telefono</th>
+                                    <th scope="col">Direccion</th>
+                                    <th scope="col">Fecha Nac</th>
+                                    <th scope="col">Fecha Ing</th>
                                     <th scope="col">Imagen</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
@@ -49,6 +52,9 @@ src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
                                     <td>{{producto.nombre}}</td>
                                     <td>{{producto.Dni}}</td>
                                     <td>{{producto.telefono}}</td>
+                                    <td>{{producto.direccion}}</td>
+                                    <td>{{producto.fechnac}}</td>
+                                    <td>{{producto.feching}}</td>
                                     <td>
                                         <img width="60"  :src="producto.imagen" :alt="producto.nombre">
                                     </td>

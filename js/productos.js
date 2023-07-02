@@ -12,6 +12,9 @@ const { createApp } = Vue
         imagen:"",
         telefono:0,
         Dni:0,
+        direccion:"",
+        fechnac: new Date(),
+        feching: new Date(),
     }  
     },
     methods: {
@@ -43,6 +46,9 @@ const { createApp } = Vue
                 nombre:this.nombre,
                 Dni: this.Dni,
                 telefono: this.telefono,
+                direccion:this.direccion,
+                fechnac:this.fechnac,
+                feching:this.feching,
                 imagen:this.imagen
             }
             var options = {

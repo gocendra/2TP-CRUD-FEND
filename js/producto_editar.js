@@ -21,9 +21,12 @@ const { createApp } = Vue
                     console.log(data)
                     this.id=data.id
                     this.nombre = data.nombre;
-                    this.imagen=data.imagen
                     this.telefono=data.telefono
-                    this.Dni=data.Dni                    
+                    this.Dni=data.Dni
+                    this.direccion=data.direccion,
+                    this.fechnac=data.fechnac,
+                    this.feching=data.feching,                    
+                    this.imagen=data.imagen
                 })
                 .catch(err => {
                     console.error(err);
@@ -35,6 +38,9 @@ const { createApp } = Vue
                 nombre:this.nombre,
                 Dni: this.Dni,
                 telefono: this.telefono,
+                direccion:this.direccion,
+                fechnac:this.fechnac,
+                feching:this.feching,
                 imagen:this.imagen
             }
             var options = {

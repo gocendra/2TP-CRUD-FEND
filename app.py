@@ -22,11 +22,17 @@ class Producto(db.Model):
     nombre=db.Column(db.String(100))
     Dni=db.Column(db.Integer)
     telefono=db.Column(db.Integer)
+    direccion=db.Column(db.String(150))
+    fechnac=db.Column(db.Date())
+    feching=db.Column(db.Date())
     imagen=db.Column(db.String(400))
-    def __init__(self,nombre,Dni,telefono,imagen):
+    def __init__(self,nombre,Dni,telefono,direccion,fechnac,feching,imagen):
         self.nombre = nombre
         self.Dni = Dni
         self.telefono = telefono
+        self.direccion = direccion
+        self.fechnac = fechnac
+        self.feching = feching
         self.imagen = imagen
 
     #Si hay mas tablas para crear las definimos aca
@@ -36,7 +42,7 @@ with app.app_context():
 
 class ProductoSchema(ma.Schema):
     class Meta:
-        fields=('id','nombre','Dni','telefono','imagen')
+        fields=('id','nombre','Dni','telefono','direccion','fechnac','feching','imagen')
     
 producto_schema=ProductoSchema() #El objeto para traer un producto
 productos_schema=ProductoSchema(many=True) #Trae muchos registro de producto
@@ -80,8 +86,11 @@ def create_producto():
     nombre=request.json['nombre']
     Dni=request.json['Dni']
     telefono=request.json['telefono']
+    direccion=request.json['direccion']
+    fechnac=request.json['fechnac']
+    feching=request.json['feching']
     imagen=request.json['imagen']
-    new_producto=Producto(nombre,Dni,telefono,imagen)
+    new_producto=Producto(nombre,Dni,telefono,direccion,fechnac,fechnac,imagen)
     db.session.add(new_producto)
     db.session.commit()
     return producto_schema.jsonify(new_producto)
@@ -94,6 +103,9 @@ def update_producto(id):
     producto.nombre=request.json['nombre']
     producto.Dni=request.json['Dni']
     producto.telefono=request.json['telefono']
+    producto.direccion=request.json['direccion']
+    producto.fechnac=request.json['fechnac']
+    producto.feching=request.json['feching']
     producto.imagen=request.json['imagen']
 
 
