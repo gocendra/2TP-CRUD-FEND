@@ -20,7 +20,7 @@ const { createApp } = Vue
                 .then(data => {
                     console.log(data)
                     this.id=data.id
-                    this.nombre = data.nombre;
+                    this.nombre =data.nombre
                     this.telefono=data.telefono
                     this.Dni=data.Dni
                     this.direccion=data.direccion,
