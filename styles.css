@@ -1,0 +1,8 @@
+main {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(124,177,22,1) 100%);
+}
+.nav1 {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(22,124,177,1) 100%);
+}
