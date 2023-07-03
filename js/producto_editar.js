@@ -20,10 +20,13 @@ const { createApp } = Vue
                 .then(data => {
                     console.log(data)
                     this.id=data.id
-                    this.nombre = data.nombre;
-                    this.imagen=data.imagen
+                    this.nombre =data.nombre
                     this.telefono=data.telefono
-                    this.Dni=data.Dni                    
+                    this.Dni=data.Dni
+                    this.direccion=data.direccion,
+                    this.fechnac=data.fechnac,
+                    this.feching=data.feching,                    
+                    this.imagen=data.imagen
                 })
                 .catch(err => {
                     console.error(err);
@@ -31,10 +34,38 @@ const { createApp } = Vue
                 })
         },
         modificar() {
+            if (this.nombre.trim() === '') {
+                alert('El campo "nombre" es obligatorio');
+            return; 
+            }
+            if (!Number.isInteger(this.Dni) || this.Dni <= 0) {
+                alert('El campo "Dni" debe ser un número válido');
+            return;
+            }
+            if (!Number.isInteger(this.telefono) || this.telefono <= 0) {
+                alert('El campo "telefono" debe ser un número válido');
+            return;
+            }
+            if (this.direccion.trim() === '') {
+                alert('El campo "direccion" es obligatorio');
+            return;
+            }
+            const fechaActual = new Date();
+            if (this.fechnac >= fechaActual) {
+                alert('La fecha de nacimiento debe ser anterior a la fecha actual');
+            return;
+            }
+            if (this.feching <= this.fechnac) {
+                alert('La fecha de ingreso debe ser posterior a la fecha de nacimiento');
+            return;
+            }
             let producto = {
                 nombre:this.nombre,
                 Dni: this.Dni,
                 telefono: this.telefono,
+                direccion:this.direccion,
+                fechnac:this.fechnac,
+                feching:this.feching,
                 imagen:this.imagen
             }
             var options = {

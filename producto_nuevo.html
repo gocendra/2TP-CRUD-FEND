@@ -15,28 +15,38 @@
   </header>
   <main>
     <div class="container" id="app">
-        <form  style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
+      <form  style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
         <h1>Alta de Empleado</h1>
         <div class="mb-3">
           <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre" v-model="nombre">
+          <input type="text" name="nombre" id="nombre" v-model="nombre" required>
         </div>
         <div class="mb-3">
           <label for="Dni">Dni</label>
-          <input type="number" name="Dni" id="Dni" v-model="Dni">
+          <input type="number" name="Dni" id="Dni" v-model="Dni" required>
         </div>
         <div class="mb-3">
           <label for="telefono">Telefono</label>
-          <input type="number" name="telefono" id="telefono" v-model="telefono">
+          <input type="number" name="telefono" id="telefono" v-model="telefono" required>
+        </div>
+        <div class="mb-3">
+          <label for="direccion">Dirección</label>
+          <input type="text" name="direccion" id="direccion" v-model="direccion" required>
+        </div>
+        <div class="mb-3">
+          <label for="fechnac">F-Nac</label>
+          <input type="date" name="fechnac" id="fechnac" v-model="fechnac" required>
+        </div>
+        <div class="mb-3">
+          <label for="feching">F-Ing</label>
+          <input type="date" name="feching" id="feching" v-model="feching" required>
         </div>
         <div class="mb-3">
           <label for="imagen">Imagen</label>
-          <input type="text" name="imagen" id="imagen" v-model="imagen">
+          <input type="text" name="imagen" id="imagen" v-model="imagen" required>
           <img width="100" :src="imagen" alt="">
-         
         </div>
-       
-          <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
+        <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
       </form>
 
 
