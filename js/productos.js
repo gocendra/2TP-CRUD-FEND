@@ -33,7 +33,7 @@ const { createApp } = Vue
         eliminar(producto) {
             if (!confirm('¿Estás seguro/a de que deseas eliminar este producto?')) {
                 return; // Si el usuario cancela, se detiene la ejecución
-              }
+            }
             const url = this.url+'/' + producto;
             var options = {
                 method: 'DELETE',
