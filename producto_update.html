@@ -16,7 +16,7 @@
     <div class="container" id="app">
       <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
       <h2>Editar Empleado </h2>
-      <p>Dni:{{Dni}}</p>
+      <!-- <p>Dni:{{Dni}}</p> -->
       <div class="mb-3">
         <label for="id">Id</label>
         <input type="number" name="id" id="id" disabled v-model="id" >
@@ -32,6 +32,18 @@
       <div class="mb-3">
         <label for="telefono">Telefono</label>
         <input type="number" name="telefono" id="telefono" v-model="telefono">
+      </div>
+      <div class="mb-3">
+        <label for="direccion">Direccion</label>
+        <input type="text" name="direccion" id="direccion" v-model="direccion">
+      </div>
+      <div class="mb-3">
+        <label for="fechnac">Fecha de Nacimiento</label>
+        <input type="date" name="fechnac" id="fechnac" v-model="fechnac">
+      </div>
+      <div class="mb-3">
+        <label for="feching">Fecha de Ingreso</label>
+        <input type="date" name="feching" id="feching" v-model="feching">
       </div>
       <div class="mb-3">
         <label for="imagen">Imagen</label>
