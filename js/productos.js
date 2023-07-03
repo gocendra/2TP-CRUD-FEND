@@ -42,6 +42,31 @@ const { createApp } = Vue
                 })
         },
         grabar(){
+            if (this.nombre.trim() === '') {
+                alert('El campo "nombre" es obligatorio');
+            return; 
+            }
+            if (!Number.isInteger(this.Dni) || this.Dni <= 0) {
+                alert('El campo "Dni" debe ser un número válido');
+            return;
+            }
+            if (!Number.isInteger(this.telefono) || this.telefono <= 0) {
+                alert('El campo "telefono" debe ser un número válido');
+            return;
+            }
+            if (this.direccion.trim() === '') {
+                alert('El campo "direccion" es obligatorio');
+            return;
+            }
+            const fechaActual = new Date();
+            if (this.fechnac >= fechaActual) {
+                alert('La fecha de nacimiento debe ser anterior a la fecha actual');
+            return;
+            }
+            if (this.feching <= this.fechnac) {
+                alert('La fecha de ingreso debe ser posterior a la fecha de nacimiento');
+            return;
+            }
             let producto = {
                 nombre:this.nombre,
                 Dni: this.Dni,
