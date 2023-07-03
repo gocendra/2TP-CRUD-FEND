@@ -32,7 +32,7 @@ const { createApp } = Vue
         },
         eliminar(producto) {
             if (!confirm('¿Estás seguro/a de que deseas eliminar este producto?')) {
-                return; // Si el usuario cancela, se detiene la ejecución
+                return; 
             }
             const url = this.url+'/' + producto;
             var options = {
@@ -63,11 +63,11 @@ const { createApp } = Vue
             }
             const fechaActual = new Date();
             if (this.fechnac >= fechaActual) {
-                alert('La fecha de nacimiento debe ser anterior a la fecha actual');
+                alert('Debe Ingresar la fecha de Nacimiento');
             return;
             }
             if (this.feching <= this.fechnac) {
-                alert('La fecha de ingreso debe ser posterior a la fecha de nacimiento');
+                alert('Debe Ingresar la fecha de Ingreso a la empresa');
             return;
             }
             let producto = {
