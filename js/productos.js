@@ -92,7 +92,7 @@ const { createApp } = Vue
                 })
                 .catch(err => {
                     console.error(err);
-                    alert("Error al Grabarr")
+                    alert("Error al Grabar")
                 })      
         }
     },
