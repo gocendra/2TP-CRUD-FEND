@@ -88,7 +88,7 @@ const { createApp } = Vue
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
-                    window.location.href = "./productos.html";  
+                    window.location.href = "./empleados.html";  
                 })
                 .catch(err => {
                     console.error(err);
