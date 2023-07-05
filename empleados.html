@@ -13,14 +13,15 @@ src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
     <link href="styles.css" rel="stylesheet"> 
 </head>
 <body>
-    <header id="header">
-        <!-- place navbar here -->
+    <header class="header">
+        <h1>Recursos Humanos CRUD Empleados</h1>
+        <p>Transformando el talento en éxito</p>
     </header>
     <main>
         <div id="app" class="container">
             <h1>Empleados</h1>
             <br>
-            <a  class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+            <a  class="btn btn-primary" href="empleado_nuevo.html">Nuevo</a>
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos ........</p>
@@ -59,7 +60,7 @@ src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
                                         <img width="60"  :src="producto.imagen" :alt="producto.nombre">
                                     </td>
                                     <td>
-                    			<a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
+                    			<a class="btn btn-primary" :href="'empleado_update.html?id='+ producto.id" >Editar</a>
                                       <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
                                     </td>
                                 </tr>
@@ -70,8 +71,9 @@ src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
             </div>
         </div>
     </main>
-    <footer>
-        <!-- place footer here -->
+    <footer class="footer">
+        <p>Claudia Garcia - Guillermina Morel - Gabriel Cendra</p>
+        <p>Derechos de autor &copy; 2023 CaC.</p>
     </footer>
     
     <script src="./js/main.js"></script>

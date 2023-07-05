@@ -3,6 +3,89 @@ main {
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(124,177,22,1) 100%);
 }
 .nav1 {
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(22,124,177,1) 100%);
+    background: rgb(59, 185, 175);
+    background: radial-gradient(circle, rgb(32, 62, 211) 0%, rgb(10, 81, 119) 100%);
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .header p {
+    margin: 0;
+    font-size: 18px;
+  }
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .centrar {
+    text-align: center;
+    
+  }
+  .btn{
+    margin-bottom: 20px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-container h2 {
+    text-align: center;
+  }
+  
+  .login-form {
+    margin-top: 20px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
